@@ -20,6 +20,7 @@ export const flattenTraceCalls = (calls: DetectionRequestTraceCall[]) => {
 
     return flattened
 }
+
 export const getApprovalParams = (input: string): { spender: string; amount: string } => {
     // 0x + 8 chars of signature + 64 chars of spender + 64 chars of amount
     const SIGNATURE_LENGTH = 8
