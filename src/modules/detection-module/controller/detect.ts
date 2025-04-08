@@ -20,7 +20,7 @@ export const detect = async (
         await validateRequest(request)
 
         // perform business logic
-        const result = DetectionService.detect(request)
+        const result = await DetectionService.detect(request)
 
         logger.debug('detect request finished succesfully')
 

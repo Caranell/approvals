@@ -60,11 +60,14 @@ const handleShutDown = (signal: NodeJS.Signals) => {
 
 // Start the server
 //
-server.listen(PORT, HOST, () => logger.info(`Custom detector service started on ${URL}`))
 
-// Listen for termination signals
-process.on('SIGINT', handleShutDown)
-process.on('SIGTERM', handleShutDown)
+if (process.env.NODE_ENV !== 'test') {
+    server.listen(PORT, HOST, () => logger.info(`Custom detector service started on ${URL}`))
+
+    // Listen for termination signals
+    process.on('SIGINT', handleShutDown)
+    process.on('SIGTERM', handleShutDown)
+}
 
 // Exports
 //

@@ -37,6 +37,7 @@
         "express": "^4.19.2",
         "morgan": "^1.10.0",
         "reflect-metadata": "^0.2.2",
+        "viem": "^2.26.2",
         "winston": "^3.14.1"
     },
     "devDependencies": {
